@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="test-classes" path="test"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/myclerk/mongodb-mongo-java-driver-r2.8.0-79-gc0f92ff/mongodb-mongo-java-driver-c0f92ff/lib/clirr-core-0.6-uber.jar"/>
+	<classpathentry kind="lib" path="C:/myclerk/mongodb-mongo-java-driver-r2.8.0-79-gc0f92ff/mongodb-mongo-java-driver-c0f92ff/lib/ant-contrib-1.0b3.jar"/>
+	<classpathentry kind="lib" path="C:/myclerk/mongodb-mongo-java-driver-r2.8.0-79-gc0f92ff/mongodb-mongo-java-driver-c0f92ff/lib/testng-6.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/myclerk/mongo-2.8.0.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="413px">
+			<g:HorizontalPanel width="412px">
+				<g:Label text="Request Type" width="92px"/>
+				<g:ListBox visibleItemCount="1" width="163px" ui:field="listRequestTypes"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="408px" height="107px">
+				<g:Label text="Symptoms:" width="150px"/>
+				<g:TextArea width="279px" ui:field="descText" height="104px"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="440px" horizontalAlignment="ALIGN_CENTER">
+				<g:Button text="Get Quotes" ui:field="submitBtn"/>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

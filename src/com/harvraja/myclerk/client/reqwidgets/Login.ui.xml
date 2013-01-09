@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="453px" height="121px">
+			<g:Label text="Sign-in to your account:"/>
+			<g:HorizontalPanel width="112px">
+				<g:Label text="Username: " width="115px" height="34px"/>
+				<g:TextBox ui:field="uname"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="290px">
+				<g:Label text="Password:" height="35px" width="117px"/>
+				<g:TextBox ui:field="passwd"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="292px" horizontalAlignment="ALIGN_CENTER">
+				<g:Button ui:field="button">Sign In</g:Button>
+			</g:HorizontalPanel>
+			<g:Label ui:field="msgLbl"/>
+			<g:Label ui:field="errorLbl"/>
+		</g:VerticalPanel>
+		
+		
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		
+		<g:VerticalPanel height="131px">
+			<g:VerticalPanel>
+				<g:InlineHyperlink text="Home" targetHistoryToken="main" ui:field="lnkHome"/>
+				<g:InlineHyperlink text="Sign Up" targetHistoryToken="signup" ui:field="lnkSignUp"/>
+				<g:InlineHyperlink text="Sign In" targetHistoryToken="signin" ui:field="lnkSignIn"/>
+				<g:InlineHyperlink text="Create Request" targetHistoryToken="createRequest" ui:field="lnkCreateRequest"/>
+				<g:InlineHyperlink text="View Requests" targetHistoryToken="viewRequest" ui:field="lnkViewRequest"/>
+				<g:InlineHyperlink text="Sign Out" targetHistoryToken="main" ui:field="lnkSignOut"/>
+			</g:VerticalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

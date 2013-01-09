@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.requestPanel {
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="447px" height="118px">
+			<g:HorizontalPanel width="237px" height="39px">
+				<g:VerticalPanel width="236px" height="49px">
+					<g:Label text="Home Services"/>
+					<g:InlineHyperlink text="Plumbing" targetHistoryToken="newHistoryToken" ui:field="lnkPlumbing"/>
+					<g:VerticalPanel width="122px" ui:field="plumbingPanel" styleName="{style.requestPanel}">
+						<g:Hyperlink text="     Commercial" targetHistoryToken="commPlumbing" styleName="gwt-subcat-Hyperlink" ui:field="commPlumbingLnk"/>
+						<g:Hyperlink text="Residential" targetHistoryToken="newHistoryToken" styleName="gwt-subcat-Hyperlink" ui:field="resiPlumbingLnk"/>
+					</g:VerticalPanel>
+					<g:Hyperlink targetHistoryToken="newHistoryToken" text="Moving" ui:field="movingLnk"/>
+					<g:VerticalPanel styleName="{style.requestPanel}" width="122px" ui:field="movingPanel">
+						<g:Hyperlink styleName="gwt-subcat-Hyperlink" targetHistoryToken="commPlumbing" text="Commercial" ui:field="commMovingLnk"/>
+						<g:Hyperlink styleName="gwt-subcat-Hyperlink" targetHistoryToken="newHistoryToken" text="Residential" ui:field="resiMovingLnk"/>
+					</g:VerticalPanel>
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

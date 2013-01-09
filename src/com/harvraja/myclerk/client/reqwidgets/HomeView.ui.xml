@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:w="urn:import:com.google.gwt.widget.client">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel width="344px" height="296px">
+			<g:HorizontalPanel width="343px" height="297px">
+				<g:VerticalPanel height="48px" ui:field="menuComposite" width="61px"/>
+				<g:VerticalPanel height="299px" width="267px">
+					<g:Label text="THIS IS MYCLERK APPLICATION"/>
+				
+				</g:VerticalPanel>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

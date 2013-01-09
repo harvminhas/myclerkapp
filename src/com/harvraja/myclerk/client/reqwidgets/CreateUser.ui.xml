@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel ui:field="topPanel">
+		<g:VerticalPanel width="304px" height="275px">
+			<g:HorizontalPanel width="354px">
+				<g:Label text="First Name:" width="93px" height="34px"/>
+				<g:TextBox ui:field="fname"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="356px">
+				<g:Label text="Last Name: " width="93px" height="32px"/>
+				<g:TextBox ui:field="lname"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="354px">
+				<g:Label text="User Name:" width="93px"/>
+				<g:TextBox ui:field="uname"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="354px">
+				<g:Label text="Password:" width="93px"/>
+				<g:TextBox ui:field="pswd"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="354px">
+				<g:Label text="Confirm Password:" width="93px"/>
+				<g:TextBox ui:field="confirmpswd"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="354px">
+				<g:Label text="City:" width="93px"/>
+				<g:TextBox ui:field="city"/>
+			</g:HorizontalPanel>
+			<g:Button ui:field="button">SUBMIT</g:Button>
+			<g:Label ui:field="errorLbl" styleName="errorMessage"/>
+			<g:Label ui:field="mssgLbl"/>
+		</g:VerticalPanel>
+		<!-- Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete 
+			widget names. The ui:field attribute binds an element to a field in the owner 
+			class. See the GWT docs on UI Binder for more details. -->
+	</g:HTMLPanel>
+</ui:UiBinder> 

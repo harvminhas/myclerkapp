@@ -1,0 +1,2 @@
+serviceClass: com.harvraja.myclerk.client.GreetingService
+path: 1B10ED3B8708764AB5D0B2A843597057.gwt.rpc

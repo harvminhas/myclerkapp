@@ -1,0 +1,2 @@
+serviceClass: com.harvraja.myclerk.client.MyClerkService
+path: E01F28C4BB0A4A46FA51EDB0B48E0A9E.gwt.rpc
