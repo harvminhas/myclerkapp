@@ -11,6 +11,8 @@ import com.harvraja.myclerk.client.event.CreateRequestEvent;
 import com.harvraja.myclerk.client.event.CreateRequestEventHandler;
 import com.harvraja.myclerk.client.event.HomeEvent;
 import com.harvraja.myclerk.client.event.HomeEventHandler;
+import com.harvraja.myclerk.client.event.MovingRequestEvent;
+import com.harvraja.myclerk.client.event.MovingRequestEventHandler;
 import com.harvraja.myclerk.client.event.PlumbingRequestEvent;
 import com.harvraja.myclerk.client.event.PlumbingRequestEventHandler;
 import com.harvraja.myclerk.client.event.SignInEvent;
@@ -25,6 +27,7 @@ import com.harvraja.myclerk.client.reqwidgets.HomeView;
 import com.harvraja.myclerk.client.reqwidgets.CreateRequest;
 import com.harvraja.myclerk.client.reqwidgets.Login;
 import com.harvraja.myclerk.client.reqwidgets.ViewRequests;
+import com.harvraja.myclerk.client.reqwidgets.requests.MovingRequest;
 import com.harvraja.myclerk.client.reqwidgets.requests.PlumbingRequest;
 
 public class AppController implements Presenter, ValueChangeHandler<String> {
@@ -62,6 +65,17 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 						// TODO Auto-generated method stub
 						System.out.println("create plumbing request");
 						doPlumbingRequest();
+					}
+
+				});
+		eventBus.addHandler(MovingRequestEvent.TYPE,
+				new MovingRequestEventHandler() {
+
+					@Override
+					public void onCreateRequest(MovingRequestEvent event) {
+						// TODO Auto-generated method stub
+						System.out.println("create moving request");
+						doMovingRequest();
 					}
 
 				});
@@ -118,6 +132,9 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
     private void doPlumbingRequest(){
     	History.newItem(IEvents.CREATEPLUMBINGREQUEST_EVENT);
     }
+    private void doMovingRequest(){
+    	History.newItem(IEvents.CREATEMOVINGREQUEST_EVENT);
+    }
 	private void doCreateRequest() {
 		History.newItem(IEvents.CREATEREQUEST_EVENT);
 	}
@@ -172,6 +189,8 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 				presenter = new SignupPresenter(rpcService, eventBus, CreateUser.getInstance());
 			}else if(token.equals(IEvents.CREATEPLUMBINGREQUEST_EVENT)){
 				presenter = new PlumbingRequestPresenter(rpcService, eventBus, PlumbingRequest.getInstance() );
+			}else if(token.equals(IEvents.CREATEMOVINGREQUEST_EVENT)){
+				presenter = new MovingRequestPresenter(rpcService, eventBus, MovingRequest.getInstance() );
 			}
 			
 			/**

@@ -11,6 +11,7 @@ import com.google.web.bindery.event.shared.HandlerRegistration;
 import com.harvraja.myclerk.client.MyClerkServiceAsync;
 import com.harvraja.myclerk.client.event.HomeEvent;
 import com.harvraja.myclerk.client.presenter.CreateRequestPresenter.Display;
+import com.harvraja.myclerk.client.reqwidgets.common.AddressWidget;
 import com.harvraja.myclerk.shared.ServiceRequestTO;
 
 public class MovingRequestPresenter extends AbstractPresenter {
@@ -22,6 +23,9 @@ public class MovingRequestPresenter extends AbstractPresenter {
 	    String getType();
 	    String getDescription();
 	    void setErrorMesage(String msg);
+		HasClickHandlers getMoveTypeList();
+		AddressWidget getFromCityWidget();
+		AddressWidget getToCityWidget();
     }
     public MovingRequestPresenter(MyClerkServiceAsync rpcService, HandlerManager eventBus, Display view){
 		super(rpcService, eventBus);

@@ -9,4 +9,5 @@ public interface IEvents {
   public static String VIEWONEREQUEST_EVENT = "viewRequest";
   public static String CREATEPLUMBINGREQUEST_EVENT = "plumbingRequest";
   public static String VIEWREQUESTS_EVENT = "viewRequests";
+public static String CREATEMOVINGREQUEST_EVENT = "movingRequest";
 }
