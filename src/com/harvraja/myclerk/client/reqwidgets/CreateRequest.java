@@ -82,9 +82,14 @@ public class CreateRequest extends Composite implements HasText,
 	}
 
 	@Override
-	public HasClickHandlers getMovingLink() {
+	public HasClickHandlers getResiMovingLink() {
 		// TODO Auto-generated method stub
-		return movingLnk;
+		return resiMovingLnk;
+	}
+	@Override
+	public HasClickHandlers getCommMovingLink() {
+		// TODO Auto-generated method stub
+		return commMovingLnk;
 	}
 
 	@Override

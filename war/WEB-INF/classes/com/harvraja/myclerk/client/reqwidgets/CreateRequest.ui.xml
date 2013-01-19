@@ -21,7 +21,7 @@
 					<g:Hyperlink targetHistoryToken="newHistoryToken" text="Moving" ui:field="movingLnk"/>
 					<g:VerticalPanel styleName="{style.requestPanel}" width="122px" ui:field="movingPanel">
 						<g:Hyperlink styleName="gwt-subcat-Hyperlink" targetHistoryToken="commPlumbing" text="Commercial" ui:field="commMovingLnk"/>
-						<g:Hyperlink styleName="gwt-subcat-Hyperlink" targetHistoryToken="newHistoryToken" text="Residential" ui:field="resiMovingLnk"/>
+						<g:Hyperlink styleName="gwt-subcat-Hyperlink" targetHistoryToken="movingRequest" text="Residential" ui:field="resiMovingLnk"/>
 					</g:VerticalPanel>
 				</g:VerticalPanel>
 			</g:HorizontalPanel>

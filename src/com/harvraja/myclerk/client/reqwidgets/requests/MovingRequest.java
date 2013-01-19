@@ -86,25 +86,11 @@ public class MovingRequest extends Composite   implements HasText, MovingRequest
 	@Override
 	public HasClickHandlers getSubmitButton() {
 		// TODO Auto-generated method stub
-		return null;
+		return submit;
 	}
 
 
 
-	@Override
-	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
-
-	@Override
-	public String getDescription() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
 
@@ -113,6 +99,11 @@ public class MovingRequest extends Composite   implements HasText, MovingRequest
 	public void setErrorMesage(String msg) {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public String getType() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

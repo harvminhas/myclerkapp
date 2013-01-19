@@ -190,6 +190,7 @@ public class AppController implements Presenter, ValueChangeHandler<String> {
 			}else if(token.equals(IEvents.CREATEPLUMBINGREQUEST_EVENT)){
 				presenter = new PlumbingRequestPresenter(rpcService, eventBus, PlumbingRequest.getInstance() );
 			}else if(token.equals(IEvents.CREATEMOVINGREQUEST_EVENT)){
+				
 				presenter = new MovingRequestPresenter(rpcService, eventBus, MovingRequest.getInstance() );
 			}
 			

@@ -17,71 +17,88 @@ import com.harvraja.myclerk.shared.ServiceRequestTO;
 public class MovingRequestPresenter extends AbstractPresenter {
 	private final Display display;
 	private HandlerRegistration clickRegistration = null;
-    public interface Display{
-    	HasClickHandlers getSubmitButton();
-	    Widget asWidget();
-	    String getType();
-	    String getDescription();
-	    void setErrorMesage(String msg);
+
+	public interface Display {
+		HasClickHandlers getSubmitButton();
+
+		Widget asWidget();
+
+		String getType();
+
+		
+
+		void setErrorMesage(String msg);
+
 		HasClickHandlers getMoveTypeList();
+
 		AddressWidget getFromCityWidget();
+
 		AddressWidget getToCityWidget();
-    }
-    public MovingRequestPresenter(MyClerkServiceAsync rpcService, HandlerManager eventBus, Display view){
-		super(rpcService, eventBus);
-        this.display = view;
 	}
+
+	public MovingRequestPresenter(MyClerkServiceAsync rpcService,
+			HandlerManager eventBus, Display view) {
+		super(rpcService, eventBus);
+		System.out.println("INSIDE MOVING REQUEST PRESENTER");
+		this.display = view;
+	}
+
 	@Override
 	public void go(RootPanel container) {
+		System.out.println("GO");
 		bind();
+		System.out.println("GO1");
 		container.get("mainPanel").clear();
+		System.out.println("GO2");
 	    container.get("menu").clear();
+	    System.out.println("GO3");
 	    container.get("mainPanel").add(display.asWidget());
+	    System.out.println("GO4");
 	    container.get("menu").add(menu.asWidget());
-
+	    System.out.println("GO5");
 	}
-	private void bind(){
+
+	private void bind() {
 		super.commonBind();
-		
-		 clickRegistration = 
-		display.getSubmitButton().addClickHandler(new ClickHandler(){
 
-			@Override
-			public void onClick(ClickEvent event) {
-				// TODO Auto-generated method stub
-				ServiceRequestTO to = new ServiceRequestTO();
-				to.setType(display.getType());
-				to.setDescription(display.getDescription());
-				System.out.println("Moving - click event caught onClick()");
-				saveRequest(to);
-			}
-			
-		});
-		
+		clickRegistration = display.getSubmitButton().addClickHandler(
+				new ClickHandler() {
+
+					@Override
+					public void onClick(ClickEvent event) {
+						// TODO Auto-generated method stub
+						/**ServiceRequestTO to = new ServiceRequestTO();
+						to.setType(display.getType());
+						to.setDescription(display.getDescription());**/
+						System.out
+								.println("Moving - click event caught onClick()");
+						//saveRequest(to);
+					}
+
+				});
+
 	}
-	private void saveRequest(ServiceRequestTO to){
+
+	private void saveRequest(ServiceRequestTO to) {
 		to.setUsername("raja");
 		System.out.println("Moving - calling remote save request");
-		 rpcService.createRequest(to,  new AsyncCallback<ServiceRequestTO>() {
+		rpcService.createRequest(to, new AsyncCallback<ServiceRequestTO>() {
 
-				@Override
-				public void onFailure(Throwable caught) {
-					// TODO Auto-generated method stub
-					display.setErrorMesage(caught.getMessage());
-				}
+			@Override
+			public void onFailure(Throwable caught) {
+				// TODO Auto-generated method stub
+				display.setErrorMesage(caught.getMessage());
+			}
 
-				public void onSuccess(
-						ServiceRequestTO result) {
-					System.out.println("Moving - save request successful");
-					clickRegistration.removeHandler();
-					clickRegistration = null;
-					eventBus.fireEvent(new HomeEvent());
-					
-				}
+			public void onSuccess(ServiceRequestTO result) {
+				System.out.println("Moving - save request successful");
+				clickRegistration.removeHandler();
+				clickRegistration = null;
+				eventBus.fireEvent(new HomeEvent());
 
-				
-	  			
-	  		});
+			}
+
+		});
 	}
 
 	@Override
